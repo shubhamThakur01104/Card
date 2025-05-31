@@ -1,0 +1,161 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+@import url('./variables.css');
+
+/* ======================================
+   Global Reset & Typography
+====================================== */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: var(--heading-font);
+}
+
+body {
+  background: var(--body-bg);
+  color: var(--text-color);
+}
+
+/* ======================================
+   Subscription Wrapper
+====================================== */
+.subscription-wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--wrapper-padding);
+  gap: var(--wrapper-gap);
+}
+
+/* ======================================
+   Header Section
+====================================== */
+.subscription-header {
+  text-align: center;
+}
+
+.header__title {
+  font-size: var(--title-font-size);
+  font-weight: var(--font-bold);
+  margin-bottom: var(--spacing-sm);
+}
+
+.header__subtitle,
+.header__note {
+  font-size: var(--subtitle-font-size);
+  color: var(--subtext-color);
+}
+
+/* ======================================
+   Plans Container
+====================================== */
+.subscription-plans {
+  display: flex;
+  gap: var(--plan-gap);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ======================================
+   Plan Card
+====================================== */
+.plan-card {
+  background-color: var(--bg-color);
+  padding: var(--card-padding);
+  border-radius: var(--border-radius);
+  box-shadow: var(--card-shadow);
+  width: var(--card-width);
+  display: flex;
+  flex-direction: column;
+  gap: var(--card-gap);
+  transition: transform 0.3s ease;
+}
+
+.plan-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ======================================
+   Plan Badge
+====================================== */
+.plan-card__label {
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--label-padding);
+  width: fit-content;
+  border-radius: var(--label-radius);
+  font-weight: var(--font-semibold);
+}
+
+/* ======================================
+   Description
+====================================== */
+.plan-card__description {
+  font-size: var(--description-font-size);
+  color: var(--subtext-color);
+  line-height: var(--line-height);
+}
+
+/* ======================================
+   Price Tag
+====================================== */
+.plan-card__price {
+  font-size: var(--price-font-size);
+  font-weight: var(--font-bold);
+}
+
+.plan-card__price span {
+  font-size: var(--price-subtext-font-size);
+  color: var(--subtext-color);
+}
+
+/* ======================================
+   Divider
+====================================== */
+.plan-card__divider {
+  height: 1px;
+  background-color: var(--divider-color);
+  border: none;
+}
+
+/* ======================================
+   Features
+====================================== */
+.plan-card__features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  font-size: var(--feature-font-size);
+}
+
+.feature span {
+  margin-right: var(--spacing-sm);
+  color: var(--feature-icon-color);
+}
+
+/* ======================================
+   CTA Button
+====================================== */
+.plan-card__button {
+  text-align: center;
+  background-color: var(--primary-color);
+  color: white;
+  padding: var(--button-padding);
+  border-radius: var(--border-radius);
+  font-weight: var(--font-semibold);
+  cursor: pointer;
+  transition: var(--button-transition);
+  border: none;
+}
+
+.plan-card__button:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--button-hover-shadow);
+  filter: brightness(1.1);
+}
